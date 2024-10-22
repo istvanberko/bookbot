@@ -16,15 +16,13 @@ def count_characters(fcontent):
 
     fcontent = fcontent.lower()
     
-
     for char in fcontent:
         if char in character_count and char.isalpha():
             character_count[char] += 1
         elif char.isalpha():
             character_count[char] = 1
-
+        
     character_count = dict(sorted(character_count.items(), key=lambda item: item[1], reverse=True))
-    
     return character_count
 
 def print_character_values(ccount):
